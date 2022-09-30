@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Framework Levels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Framework</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @framework_levels.each do |framework_level| %>
+      <tr>
+        <td><%= framework_level.level %></td>
+        <td><%= framework_level.framework_id %></td>
+        <td><%= framework_level.user_id %></td>
+        <td><%= link_to 'Show', framework_level %></td>
+        <td><%= link_to 'Edit', edit_framework_level_path(framework_level) %></td>
+        <td><%= link_to 'Destroy', framework_level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Framework Level', new_framework_level_path %>

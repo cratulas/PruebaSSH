@@ -1,0 +1,32 @@
+<%= form_with(model: framework_level) do |form| %>
+  <% if framework_level.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(framework_level.errors.count, "error") %> prohibited this framework_level from being saved:</h2>
+
+      <ul>
+        <% framework_level.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :framework_id %>
+    <%= form.text_field :framework_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @framework_level.level %>
+</p>
+
+<p>
+  <strong>Framework:</strong>
+  <%= @framework_level.framework_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @framework_level.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_framework_level_path(@framework_level) %> |
+<%= link_to 'Back', framework_levels_path %>
